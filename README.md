@@ -1,6 +1,6 @@
 # GS - Disruptive Architectures IOT e IA
 Projeto desenvolvido para Smart Mobility - Fiap 2022.
-* Vídeo apresentando aplicação:
+* Vídeo apresentando aplicação: https://youtu.be/lqOSrsLuMX0
 
 # Hybrid Innovation
 
