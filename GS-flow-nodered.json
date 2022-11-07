@@ -1,0 +1,467 @@
+[
+    {
+        "id": "e4f021dad07caae9",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f0746174e8f4a4bc",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "6c0be15fd539d26d",
+        "type": "ui_tab",
+        "name": "Estacionamento",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "2b1003c8d2b106a4",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "c587ae23b3a706d6",
+        "type": "ui_group",
+        "name": "Vaga A",
+        "tab": "6c0be15fd539d26d",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2d457bf1b22a7700",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "b2003a4bf17fcd6c",
+        "type": "ui_group",
+        "name": "Vaga B",
+        "tab": "6c0be15fd539d26d",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "bdb8e20581de313f",
+        "type": "mqtt out",
+        "z": "e4f021dad07caae9",
+        "name": "",
+        "topic": "gs/estacionamento",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "2d457bf1b22a7700",
+        "x": 490,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "ae111d11b07b4375",
+        "type": "inject",
+        "z": "e4f021dad07caae9",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "A",
+        "payloadType": "str",
+        "x": 150,
+        "y": 440,
+        "wires": [
+            [
+                "bdb8e20581de313f"
+            ]
+        ]
+    },
+    {
+        "id": "c68b19206e0f3093",
+        "type": "inject",
+        "z": "e4f021dad07caae9",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "B",
+        "payloadType": "str",
+        "x": 150,
+        "y": 480,
+        "wires": [
+            [
+                "bdb8e20581de313f"
+            ]
+        ]
+    },
+    {
+        "id": "aa41ae150b0a8f70",
+        "type": "inject",
+        "z": "e4f021dad07caae9",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "AB",
+        "payloadType": "str",
+        "x": 150,
+        "y": 520,
+        "wires": [
+            [
+                "bdb8e20581de313f"
+            ]
+        ]
+    },
+    {
+        "id": "b184e81758df9f49",
+        "type": "inject",
+        "z": "e4f021dad07caae9",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "X",
+        "payloadType": "str",
+        "x": 150,
+        "y": 560,
+        "wires": [
+            [
+                "bdb8e20581de313f"
+            ]
+        ]
+    },
+    {
+        "id": "9d315091cad951e0",
+        "type": "mqtt in",
+        "z": "f0746174e8f4a4bc",
+        "name": "",
+        "topic": "gs/estacionamento",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "2d457bf1b22a7700",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 280,
+        "wires": [
+            [
+                "85188cea2687cf78"
+            ]
+        ]
+    },
+    {
+        "id": "34669042f7d83470",
+        "type": "ui_text",
+        "z": "f0746174e8f4a4bc",
+        "group": "c587ae23b3a706d6",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload.vagaa}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 630,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "85188cea2687cf78",
+        "type": "function",
+        "z": "f0746174e8f4a4bc",
+        "name": "function 4",
+        "func": "if (msg.payload == 'A')\n    msg.payload = {\n        'vagaa' : 'Livre',\n        'vagab' : 'Ocupada'\n    }\nif (msg.payload == \"B\")\n    msg.payload = {\n        'vagaa': 'Ocupada',\n        'vagab': 'Livre'\n    }\nif (msg.payload == \"AB\")\n    msg.payload = {\n        'vagaa': 'Livre',\n        'vagab': 'Livre'\n    }\nif (msg.payload == 'X')\n    msg.payload = {\n        'vagaa': 'Ocupada',\n        'vagab': 'Ocupada'\n    }\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 280,
+        "wires": [
+            [
+                "34669042f7d83470",
+                "d8b9a921f5a78ec0",
+                "8046e6c97cef5caf",
+                "ff6a98467c1b924c"
+            ]
+        ]
+    },
+    {
+        "id": "d8b9a921f5a78ec0",
+        "type": "ui_text",
+        "z": "f0746174e8f4a4bc",
+        "group": "b2003a4bf17fcd6c",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload.vagab}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 630,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "8046e6c97cef5caf",
+        "type": "function",
+        "z": "f0746174e8f4a4bc",
+        "name": "function 5",
+        "func": "if(msg.payload.vagaa == 'Livre')\n    msg.payload = true\nelse \n    msg.payload = false\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 260,
+        "wires": [
+            [
+                "121dc29ca0432f97"
+            ]
+        ]
+    },
+    {
+        "id": "ff6a98467c1b924c",
+        "type": "function",
+        "z": "f0746174e8f4a4bc",
+        "name": "function 6",
+        "func": "if(msg.payload.vagab == 'Livre')\n    msg.payload = true\nelse\n    msg.payload = false\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 300,
+        "wires": [
+            [
+                "136661b7b1fe4a14"
+            ]
+        ]
+    },
+    {
+        "id": "136661b7b1fe4a14",
+        "type": "ui_led",
+        "z": "f0746174e8f4a4bc",
+        "order": 1,
+        "group": "b2003a4bf17fcd6c",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 670,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "121dc29ca0432f97",
+        "type": "ui_led",
+        "z": "f0746174e8f4a4bc",
+        "order": 1,
+        "group": "c587ae23b3a706d6",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 670,
+        "y": 140,
+        "wires": []
+    }
+]
